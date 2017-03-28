@@ -12,23 +12,26 @@ import static factoerymethodexample.ProductType.*;
  *
  * @author jeppjleemoritzled
  */
-public class FactoryMethodExample
-{
+public class FactoryMethodExample {
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args)
-    {
-        IProductFactory factory = new ProductFactory();
-        Product nyCykel = 
-                factory.createProduct(CYKEL, "standard");
-        Product gammelCykel = 
-                factory.createProduct(CYKEL, "standard");
-        
-        Product gammelToyota = 
-                factory.createProduct(BIL, "lort");
-        
+    public static void main(String[] args) {
+        IProductFactory shitFactory = new ShitProductFactory();
+        IProductFactory goodFactory = new GoodProductFactory();
+
+        Product shitCar = shitFactory.createProduct(CAR);
+        Product shitBike = shitFactory.createProduct(BIKE);
+
+        Product goodCar = goodFactory.createProduct(CAR);
+        Product goodBike = goodFactory.createProduct(BIKE);
+
+        System.out.println("Good Car: " + goodCar.getPrice()
+                + "\nShit Car: " + shitCar.getPrice()
+                + "\n\nGood Bike: " + goodBike.getPrice()
+                + "\nShit Bike: " + shitBike.getPrice());
+
     }
-    
+
 }

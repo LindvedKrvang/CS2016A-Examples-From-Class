@@ -11,6 +11,6 @@ package factoerymethodexample;
  */
 public enum ProductType
 {
-    BIL,
-    CYKEL
+    CAR,
+    BIKE
 }

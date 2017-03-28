@@ -11,7 +11,7 @@ import factoerymethodexample.BE.Product;
  *
  * @author jeppjleemoritzled
  */
-public interface IProductFactory
-{
-    public Product createProduct(ProductType type, String kategori);
+public interface IProductFactory {
+
+    public Product createProduct(ProductType type);
 }

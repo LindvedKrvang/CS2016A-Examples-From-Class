@@ -9,10 +9,12 @@ package factoerymethodexample.BE;
  *
  * @author jeppjleemoritzled
  */
-public class Bil extends Product
+public class Bike extends Product
 {
-    public Bil(int id, String name, double price)
+
+    public Bike(int id, String name, double price)
     {
         super(id, name, price);
     }
+    
 }
